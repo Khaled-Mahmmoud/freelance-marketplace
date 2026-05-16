@@ -12,6 +12,7 @@ const gigRoutes = require("./routes/gig.routes");
 const orderRoutes = require("./routes/order.routes");
 const reviewRoutes = require("./routes/review.routes");
 const messageRoutes = require("./routes/message.routes");
+const userRoutes = require("./routes/user.routes");
 
 dotenv.config();
 connectDB();
@@ -36,6 +37,7 @@ app.use("/api/gigs", gigRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/messages", messageRoutes);
+app.use("/api/users", userRoutes);
 
 app.get("/", (req, res) => {
     res.json({ message: "API is running..." });
